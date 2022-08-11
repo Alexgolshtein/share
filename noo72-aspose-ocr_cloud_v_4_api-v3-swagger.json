@@ -1,0 +1,708 @@
+{
+  "openapi" : "3.0.1",
+  "info" : {
+    "title" : "Aspose OCR Cloud V4 API",
+    "description" : "Aspose OCR Cloud V4 API",
+    "termsOfService" : "https://about.aspose.cloud/legal/tos",
+    "contact" : {
+      "name" : "Aspose",
+      "url" : "https://about.aspose.cloud/contact"
+    },
+    "license" : {
+      "name" : "License",
+      "url" : "https://about.aspose.cloud/legal"
+    },
+    "version" : "v3"
+  },
+  "paths" : {
+    "/RecognizeImageApi" : {
+      "post" : {
+        "tags" : [ "RecognizeImageApi" ],
+        "summary" : "Send image on recognition with specific pipeline",
+        "operationId" : "PostRecognizeImage",
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/OCRRecognizeImageBody"
+              }
+            }
+          }
+        },
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "content" : {
+              "text/plain" : {
+                "schema" : {
+                  "type" : "string"
+                }
+              },
+              "application/json" : {
+                "schema" : {
+                  "type" : "string"
+                }
+              },
+              "text/json" : {
+                "schema" : {
+                  "type" : "string"
+                }
+              }
+            }
+          },
+          "400" : {
+            "description" : "Bad Request",
+            "content" : {
+              "text/plain" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/OCRCoreError"
+                }
+              },
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/OCRCoreError"
+                }
+              },
+              "text/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/OCRCoreError"
+                }
+              }
+            }
+          }
+        }
+      },
+      "get" : {
+        "tags" : [ "RecognizeImageApi" ],
+        "summary" : "Get recognition result",
+        "operationId" : "GetRecognizeImage",
+        "parameters" : [ {
+          "name" : "id",
+          "in" : "query",
+          "description" : "Task id to select the result",
+          "schema" : {
+            "type" : "string"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/OCRResponse"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete" : {
+        "tags" : [ "RecognizeImageApi" ],
+        "summary" : "Cancel / Decline Task",
+        "operationId" : "CancelRecognizeImage",
+        "parameters" : [ {
+          "name" : "id",
+          "in" : "query",
+          "description" : "",
+          "schema" : {
+            "type" : "string"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success"
+          }
+        }
+      }
+    },
+    "/RecognizePdfApi" : {
+      "post" : {
+        "tags" : [ "RecognizePdfApi" ],
+        "summary" : "Send image on recognition as Table",
+        "operationId" : "PostRecognizePdf",
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/OCRRecognizePdfBody"
+              }
+            }
+          }
+        },
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "content" : {
+              "text/plain" : {
+                "schema" : {
+                  "type" : "string"
+                }
+              },
+              "application/json" : {
+                "schema" : {
+                  "type" : "string"
+                }
+              },
+              "text/json" : {
+                "schema" : {
+                  "type" : "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "get" : {
+        "tags" : [ "RecognizePdfApi" ],
+        "summary" : "Get recognition result",
+        "operationId" : "GetRecognizePdf",
+        "parameters" : [ {
+          "name" : "id",
+          "in" : "query",
+          "description" : "Task id to select the result",
+          "schema" : {
+            "type" : "string"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/OCRResponse"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete" : {
+        "tags" : [ "RecognizePdfApi" ],
+        "summary" : "Cancel / Decline Task",
+        "operationId" : "CancelRecognizePdf",
+        "parameters" : [ {
+          "name" : "id",
+          "in" : "query",
+          "description" : "",
+          "schema" : {
+            "type" : "string"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success"
+          }
+        }
+      }
+    },
+    "/RecognizeReceiptApi" : {
+      "post" : {
+        "tags" : [ "RecognizeReceiptApi" ],
+        "summary" : "Send image on recognition as Receipt",
+        "operationId" : "PostRecognizeReceipt",
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/OCRRecognizeReceiptBody"
+              }
+            }
+          }
+        },
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "content" : {
+              "text/plain" : {
+                "schema" : {
+                  "type" : "string"
+                }
+              },
+              "application/json" : {
+                "schema" : {
+                  "type" : "string"
+                }
+              },
+              "text/json" : {
+                "schema" : {
+                  "type" : "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "get" : {
+        "tags" : [ "RecognizeReceiptApi" ],
+        "summary" : "Get recognition result",
+        "operationId" : "GetRecognizeReceipt",
+        "parameters" : [ {
+          "name" : "id",
+          "in" : "query",
+          "description" : "Task id to select the result",
+          "schema" : {
+            "type" : "string"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/OCRResponse"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete" : {
+        "tags" : [ "RecognizeReceiptApi" ],
+        "summary" : "Cancel / Decline Task",
+        "operationId" : "CancelRecognizeReceipt",
+        "parameters" : [ {
+          "name" : "id",
+          "in" : "query",
+          "description" : "",
+          "schema" : {
+            "type" : "string"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success"
+          }
+        }
+      }
+    },
+    "/RecognizeTableApi" : {
+      "post" : {
+        "tags" : [ "RecognizeTableApi" ],
+        "summary" : "Send image on recognition as Table",
+        "operationId" : "PostRecognizeTable",
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/OCRRecognizeTableBody"
+              }
+            }
+          }
+        },
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "content" : {
+              "text/plain" : {
+                "schema" : {
+                  "type" : "string"
+                }
+              },
+              "application/json" : {
+                "schema" : {
+                  "type" : "string"
+                }
+              },
+              "text/json" : {
+                "schema" : {
+                  "type" : "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "get" : {
+        "tags" : [ "RecognizeTableApi" ],
+        "summary" : "Get recognition result",
+        "operationId" : "GetRecognizeTable",
+        "parameters" : [ {
+          "name" : "id",
+          "in" : "query",
+          "description" : "Task id to select the result",
+          "schema" : {
+            "type" : "string"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/OCRResponse"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete" : {
+        "tags" : [ "RecognizeTableApi" ],
+        "summary" : "Cancel / Decline Task",
+        "operationId" : "CancelRecognizeTable",
+        "parameters" : [ {
+          "name" : "id",
+          "in" : "query",
+          "description" : "",
+          "schema" : {
+            "type" : "string"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success"
+          }
+        }
+      }
+    }
+  },
+  "components" : {
+    "schemas" : {
+      "DsrConfidence" : {
+        "enum" : [ "Default", "Low", "LowMid", "Mid", "MidHigh", "High", "Ultra", "All" ],
+        "type" : "string",
+        "description" : "Region filtering threshold. Filtering by the algorithm confidence scale. Higher mode - more aggressive filtering. Default == Medium"
+      },
+      "DsrMode" : {
+        "enum" : [ "Regions", "DsrNoFilter", "DsrAndFilter", "NoDsrNoFilter", "TextDetector", "DsrPlusDetector" ],
+        "type" : "string",
+        "description" : "Option that sets the recognition result type or combination of some types: Text, Searchable PDF, HOCR"
+      },
+      "LanguageEnum" : {
+        "enum" : [ "English", "German", "French", "Italian", "Spanish", "Portuguese", "Polish", "Slovene", "Slovak", "Netherlands", "Lithuanian", "Latvian", "Danish", "Norwegian", "Finnish", "Serbian", "Croatian", "Czech", "Swedish", "Estonian", "Romanian", "Chinese", "Russian", "Arabic", "Hindi", "Ukraine" ],
+        "type" : "string",
+        "description" : "Recognition Language"
+      },
+      "OCRCoreError" : {
+        "type" : "object",
+        "properties" : {
+          "message" : {
+            "type" : "string",
+            "description" : "Error text message",
+            "nullable" : true
+          }
+        },
+        "additionalProperties" : false,
+        "description" : "Error to return to SDK client"
+      },
+      "OCRRecognizeImageBody" : {
+        "required" : [ "image", "settings" ],
+        "type" : "object",
+        "properties" : {
+          "image" : {
+            "type" : "string",
+            "description" : "Gets or Sets Image",
+            "format" : "byte"
+          },
+          "settings" : {
+            "$ref" : "#/components/schemas/OCRSettingsRecognizeImage"
+          }
+        },
+        "additionalProperties" : false,
+        "description" : "Combines Image data and OCR Recognition settings"
+      },
+      "OCRRecognizePdfBody" : {
+        "required" : [ "image", "settings" ],
+        "type" : "object",
+        "properties" : {
+          "image" : {
+            "type" : "string",
+            "description" : "Gets or Sets Image",
+            "format" : "byte"
+          },
+          "settings" : {
+            "$ref" : "#/components/schemas/OCRSettingsRecognizePdf"
+          }
+        },
+        "additionalProperties" : false,
+        "description" : "Combines Image data and OCR Recognition settings for PDF"
+      },
+      "OCRRecognizeReceiptBody" : {
+        "required" : [ "image", "settings" ],
+        "type" : "object",
+        "properties" : {
+          "image" : {
+            "type" : "string",
+            "description" : "Gets or Sets Image",
+            "format" : "byte"
+          },
+          "settings" : {
+            "$ref" : "#/components/schemas/OCRSettingsRecognizeReceipt"
+          }
+        },
+        "additionalProperties" : false,
+        "description" : "Combines Image data and OCR Recognition settings fro Receipt image"
+      },
+      "OCRRecognizeTableBody" : {
+        "required" : [ "image", "settings" ],
+        "type" : "object",
+        "properties" : {
+          "image" : {
+            "type" : "string",
+            "description" : "Gets or Sets Image",
+            "format" : "byte"
+          },
+          "settings" : {
+            "$ref" : "#/components/schemas/OCRSettingsRecognizeTable"
+          }
+        },
+        "additionalProperties" : false,
+        "description" : "Combines Image data and OCR Recognition settings for Table image"
+      },
+      "OCRResponse" : {
+        "type" : "object",
+        "properties" : {
+          "id" : {
+            "type" : "string",
+            "description" : "The specific Task ID that result was made for",
+            "nullable" : true
+          },
+          "requestStatusCode" : {
+            "type" : "integer",
+            "description" : "Response code (OK 0 / PartiallyNotFound 1 / NoAnyData 2 / NotFound 3 / Error 4 / e.g.)",
+            "format" : "int32"
+          },
+          "taskStatus" : {
+            "$ref" : "#/components/schemas/OCRTaskStatus"
+          },
+          "results" : {
+            "type" : "array",
+            "items" : {
+              "$ref" : "#/components/schemas/OCRResult"
+            },
+            "description" : "List of results - Especially Text or PDF files",
+            "nullable" : true
+          },
+          "error" : {
+            "$ref" : "#/components/schemas/OCRCoreError"
+          }
+        },
+        "additionalProperties" : false,
+        "description" : "Response with Recognition result for specific task ID"
+      },
+      "OCRResult" : {
+        "type" : "object",
+        "properties" : {
+          "type" : {
+            "type" : "string",
+            "description" : "File data type (extension)",
+            "nullable" : true
+          },
+          "data" : {
+            "type" : "string",
+            "description" : "File binary data",
+            "format" : "byte",
+            "nullable" : true
+          }
+        },
+        "additionalProperties" : false,
+        "description" : "Represents information about response after OCR."
+      },
+      "OCRSettingsRecognizeImage" : {
+        "required" : [ "pipeline" ],
+        "type" : "object",
+        "properties" : {
+          "language" : {
+            "$ref" : "#/components/schemas/LanguageEnum"
+          },
+          "makeSkewCorrect" : {
+            "type" : "boolean",
+            "description" : "Option to enable skew correction algorithm.",
+            "default" : false
+          },
+          "makeSpellCheck" : {
+            "type" : "boolean",
+            "description" : "Option to enable spell checking and correction algorithm. False by default",
+            "default" : false
+          },
+          "makeContrastCorrection" : {
+            "type" : "boolean",
+            "description" : "Option to enable image contrast correction algorithm. False by default",
+            "default" : false
+          },
+          "dsrMode" : {
+            "$ref" : "#/components/schemas/DsrMode"
+          },
+          "dsrConfidence" : {
+            "$ref" : "#/components/schemas/DsrConfidence"
+          },
+          "resultType" : {
+            "$ref" : "#/components/schemas/ResultType"
+          },
+          "pipeline" : {
+            "$ref" : "#/components/schemas/Pipeline"
+          },
+          "priority" : {
+            "$ref" : "#/components/schemas/OCRTaskPriority"
+          }
+        },
+        "additionalProperties" : false,
+        "description" : "OCR Process setting for Image recognition"
+      },
+      "OCRSettingsRecognizePdf" : {
+        "required" : [ "pipeline" ],
+        "type" : "object",
+        "properties" : {
+          "language" : {
+            "$ref" : "#/components/schemas/LanguageEnum"
+          },
+          "makeSkewCorrect" : {
+            "type" : "boolean",
+            "description" : "Option to enable skew correction algorithm. False by default, because DSR_Step_2 request",
+            "default" : false
+          },
+          "makeSpellCheck" : {
+            "type" : "boolean",
+            "description" : "Option to enable spell checking and correction algorithm. False by default",
+            "default" : false
+          },
+          "makeContrastCorrection" : {
+            "type" : "boolean",
+            "description" : "Option to enable image contrast correction algorithm. False by default",
+            "default" : false
+          },
+          "dsrMode" : {
+            "$ref" : "#/components/schemas/DsrMode"
+          },
+          "dsrConfidence" : {
+            "$ref" : "#/components/schemas/DsrConfidence"
+          },
+          "resultType" : {
+            "$ref" : "#/components/schemas/ResultType"
+          },
+          "pipeline" : {
+            "$ref" : "#/components/schemas/Pipeline"
+          },
+          "priority" : {
+            "$ref" : "#/components/schemas/OCRTaskPriority"
+          }
+        },
+        "additionalProperties" : false,
+        "description" : "OCR Process setting for Scanned multiple PDF document recognition"
+      },
+      "OCRSettingsRecognizeReceipt" : {
+        "required" : [ "pipeline" ],
+        "type" : "object",
+        "properties" : {
+          "language" : {
+            "$ref" : "#/components/schemas/LanguageEnum"
+          },
+          "makeSkewCorrect" : {
+            "type" : "boolean",
+            "description" : "Option to enable skew correction algorithm.",
+            "default" : false
+          },
+          "makeSpellCheck" : {
+            "type" : "boolean",
+            "description" : "Option to enable spell checking and correction algorithm. False by default",
+            "default" : false
+          },
+          "makeContrastCorrection" : {
+            "type" : "boolean",
+            "description" : "Option to enable image contrast correction algorithm. False by default",
+            "default" : false
+          },
+          "pipeline" : {
+            "$ref" : "#/components/schemas/Pipeline"
+          },
+          "priority" : {
+            "$ref" : "#/components/schemas/OCRTaskPriority"
+          },
+          "dsrConfidence" : {
+            "$ref" : "#/components/schemas/DsrConfidence"
+          },
+          "resultType" : {
+            "$ref" : "#/components/schemas/ResultType"
+          }
+        },
+        "additionalProperties" : false,
+        "description" : "OCR Process setting for Receipt scan image recognition"
+      },
+      "OCRSettingsRecognizeTable" : {
+        "required" : [ "pipeline" ],
+        "type" : "object",
+        "properties" : {
+          "language" : {
+            "$ref" : "#/components/schemas/LanguageEnum"
+          },
+          "makeSkewCorrect" : {
+            "type" : "boolean",
+            "description" : "Option to enable skew correction algorithm.",
+            "default" : false
+          },
+          "makeSpellCheck" : {
+            "type" : "boolean",
+            "description" : "Option to enable spell checking and correction algorithm. False by default",
+            "default" : false
+          },
+          "makeContrastCorrection" : {
+            "type" : "boolean",
+            "description" : "Option to enable image contrast correction algorithm. False by default",
+            "default" : false
+          },
+          "resultType" : {
+            "$ref" : "#/components/schemas/ResultTypeTable"
+          },
+          "pipeline" : {
+            "$ref" : "#/components/schemas/Pipeline"
+          },
+          "priority" : {
+            "$ref" : "#/components/schemas/OCRTaskPriority"
+          },
+          "dsrConfidence" : {
+            "$ref" : "#/components/schemas/DsrConfidence"
+          }
+        },
+        "additionalProperties" : false,
+        "description" : "OCR Process setting for Table image recognition"
+      },
+      "OCRTaskPriority" : {
+        "enum" : [ "Lowest", "VeryLow", "Low", "AboveLow", "BelowNormal", "Normal", "AboveNormal", "High", "VeryHigh", "Highest" ],
+        "type" : "string",
+        "description" : "Task priority for message broker queries (NMS Message Priority)\r\nThis is a copy of Apache.NMS.MsgPriority"
+      },
+      "OCRTaskStatus" : {
+        "enum" : [ "Pending", "Processing", "Completed", "Error", "NotExist" ],
+        "type" : "string",
+        "description" : "Task status"
+      },
+      "Pipeline" : {
+        "enum" : [ "KeepAliveCheck", "RecognizeImage", "RecognizeTable", "RecognizePdf", "RecognizeReceipt", "RecognizeSvg", "DsrStep1", "DsrStep2" ],
+        "type" : "string",
+        "description" : "Operation how to process file"
+      },
+      "ResultType" : {
+        "enum" : [ "Text", "Pdf", "Hocr", "Internal" ],
+        "type" : "string",
+        "description" : "Result document type for OCR process"
+      },
+      "ResultTypeTable" : {
+        "enum" : [ "Text", "Excel", "Csv" ],
+        "type" : "string",
+        "description" : "Result document type for Table OCR process"
+      }
+    },
+    "securitySchemes" : {
+      "JWT" : {
+        "type" : "oauth2",
+        "flows" : {
+          "clientCredentials" : {
+            "tokenUrl" : "https://api.aspose.cloud/connect/token",
+            "scopes" : {
+              "read" : "Grants read access",
+              "write" : "Grants write access",
+              "admin" : "Grants access to admin operations"
+            }
+          }
+        }
+      }
+    }
+  },
+  "security" : [ {
+    "JWT" : [ ]
+  } ]
+}
